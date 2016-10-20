@@ -1,4 +1,4 @@
-# Mail Delegate
+# Send Letter Delegate
 
 ## Objectives
 

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--New York View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="NewYorkViewController" customModule="SendPackageDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc" translatesAutoresizingMaskIntoConstraints="NO" id="RbZ-Q5-BZv"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fedex" translatesAutoresizingMaskIntoConstraints="NO" id="Gf4-mW-wvN">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Gf4-mW-wvN" secondAttribute="height" multiplier="1:1" id="LOD-2n-8yf"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntX-3z-xc2">
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ntX-3z-xc2" secondAttribute="height" multiplier="1:1" id="3vF-gF-RNM"/>
+                                </constraints>
+                                <state key="normal" image="sendButton"/>
+                                <connections>
+                                    <action selector="sendButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFT-gQ-sak"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zjs-5u-NFL">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="zjs-5u-NFL" secondAttribute="height" multiplier="4:3" id="Pw2-VB-K9D"/>
+                                </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Letter Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh7-xn-slv">
+                                <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="38"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="RbZ-Q5-BZv" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="4Qc-Gt-88Z"/>
+                            <constraint firstItem="ntX-3z-xc2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BhV-3s-tdw"/>
+                            <constraint firstItem="RbZ-Q5-BZv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="DuM-VE-zE0"/>
+                            <constraint firstItem="zjs-5u-NFL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HXT-8M-1Eo"/>
+                            <constraint firstItem="zjs-5u-NFL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IO0-pY-7oP"/>
+                            <constraint firstItem="zjs-5u-NFL" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="JTf-2Z-qhg"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ntX-3z-xc2" secondAttribute="bottom" constant="49" id="Jrl-Ed-8Pu"/>
+                            <constraint firstItem="Gf4-mW-wvN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PHj-Td-S0b"/>
+                            <constraint firstItem="Gf4-mW-wvN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="TvX-Ag-g2F"/>
+                            <constraint firstItem="RbZ-Q5-BZv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dBX-Mc-XIG"/>
+                            <constraint firstItem="ntX-3z-xc2" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.2" id="fA8-J4-1xH"/>
+                            <constraint firstItem="Gf4-mW-wvN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gDG-bN-Qwn"/>
+                            <constraint firstItem="RbZ-Q5-BZv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="icF-3o-5bv"/>
+                            <constraint firstItem="dh7-xn-slv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="60" id="ulk-Vy-W2c"/>
+                            <constraint firstItem="dh7-xn-slv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yUt-js-h1H"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="letterTextView" destination="zjs-5u-NFL" id="lcQ-vp-LR7"/>
+                        <outlet property="packageCenterXConstraint" destination="PHj-Td-S0b" id="fBd-DA-qI1"/>
+                        <outlet property="packageCenterYConstraint" destination="gDG-bN-Qwn" id="rfc-EG-nHj"/>
+                        <outlet property="packageImageView" destination="Gf4-mW-wvN" id="vpb-nb-tcs"/>
+                        <outlet property="receivedHeaderLabel" destination="dh7-xn-slv" id="Hrb-aO-6ui"/>
+                        <outlet property="sendButton" destination="ntX-3z-xc2" id="RuT-Xh-xpS"/>
+                        <segue destination="5d2-DT-zgQ" kind="presentation" identifier="sentSegue" modalTransitionStyle="flipHorizontal" id="CON-rJ-muQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-130" y="134"/>
+        </scene>
+        <!--London View Controller-->
+        <scene sceneID="Ile-nn-AEC">
+            <objects>
+                <viewController id="5d2-DT-zgQ" customClass="LondonViewController" customModule="SendPackageDelegate" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0TB-rJ-q42"/>
+                        <viewControllerLayoutGuide type="bottom" id="atH-vd-Xyi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="q8P-MT-Ge1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="london" translatesAutoresizingMaskIntoConstraints="NO" id="xl4-6U-JmW"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCL-01-JcP" userLabel="Container">
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Package Received" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uv1-7J-N1P">
+                                        <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="38"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="letter" translatesAutoresizingMaskIntoConstraints="NO" id="Tcb-p0-wnP">
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Tcb-p0-wnP" secondAttribute="height" multiplier="33:20" id="T6v-Kp-jI1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.90000000000000002" contentMode="scaleToFill" keyboardDismissMode="onDrag" text="Write a thank you letter..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SmE-vA-gIr">
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SmE-vA-gIr" secondAttribute="height" multiplier="4:3" id="Z0O-EN-Q5A"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="5d2-DT-zgQ" id="BJd-Ok-dUs"/>
+                                        </connections>
+                                    </textView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KKj-VK-oai">
+                                        <state key="normal" image="sendButton"/>
+                                        <connections>
+                                            <action selector="sendButtonTapped:" destination="5d2-DT-zgQ" eventType="touchUpInside" id="25c-xj-C0S"/>
+                                            <action selector="sendButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JkQ-zb-1Br"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="Tcb-p0-wnP" firstAttribute="centerX" secondItem="SmE-vA-gIr" secondAttribute="centerX" id="3HV-Js-l3A"/>
+                                    <constraint firstItem="SmE-vA-gIr" firstAttribute="width" secondItem="bCL-01-JcP" secondAttribute="width" multiplier="0.7" id="4YF-EF-Ynd"/>
+                                    <constraint firstItem="KKj-VK-oai" firstAttribute="width" secondItem="bCL-01-JcP" secondAttribute="width" multiplier="0.2" id="90S-aR-bbj"/>
+                                    <constraint firstItem="KKj-VK-oai" firstAttribute="centerX" secondItem="bCL-01-JcP" secondAttribute="centerX" id="DqA-mL-4Vr"/>
+                                    <constraint firstItem="SmE-vA-gIr" firstAttribute="centerX" secondItem="bCL-01-JcP" secondAttribute="centerX" id="Rg2-aH-ITp"/>
+                                    <constraint firstItem="Uv1-7J-N1P" firstAttribute="top" secondItem="bCL-01-JcP" secondAttribute="top" constant="80" id="hWa-UP-EGF"/>
+                                    <constraint firstItem="Uv1-7J-N1P" firstAttribute="centerX" secondItem="bCL-01-JcP" secondAttribute="centerX" id="i1l-Bw-hfz"/>
+                                    <constraint firstAttribute="bottom" secondItem="KKj-VK-oai" secondAttribute="bottom" constant="49" id="jvH-8S-S7Y"/>
+                                    <constraint firstItem="Tcb-p0-wnP" firstAttribute="bottom" secondItem="SmE-vA-gIr" secondAttribute="top" constant="-10" id="kD2-zM-z0A"/>
+                                    <constraint firstItem="Tcb-p0-wnP" firstAttribute="width" secondItem="bCL-01-JcP" secondAttribute="width" multiplier="0.15" id="mH1-3K-mn9"/>
+                                    <constraint firstItem="KKj-VK-oai" firstAttribute="width" secondItem="KKj-VK-oai" secondAttribute="height" multiplier="1:1" id="trI-mc-Who"/>
+                                    <constraint firstItem="SmE-vA-gIr" firstAttribute="centerY" secondItem="bCL-01-JcP" secondAttribute="centerY" id="viR-Rp-eID"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AAy-cp-uov" appends="YES" id="UZQ-c9-FnW"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bCL-01-JcP" firstAttribute="height" secondItem="q8P-MT-Ge1" secondAttribute="height" id="0dv-U6-TQz"/>
+                            <constraint firstItem="bCL-01-JcP" firstAttribute="width" secondItem="q8P-MT-Ge1" secondAttribute="width" id="7yU-Ck-cPT"/>
+                            <constraint firstItem="xl4-6U-JmW" firstAttribute="height" secondItem="q8P-MT-Ge1" secondAttribute="height" id="BCa-Ig-R4h"/>
+                            <constraint firstItem="xl4-6U-JmW" firstAttribute="width" secondItem="q8P-MT-Ge1" secondAttribute="width" id="NxR-e6-NBR"/>
+                            <constraint firstItem="xl4-6U-JmW" firstAttribute="centerX" secondItem="q8P-MT-Ge1" secondAttribute="centerX" id="Zcl-vc-Nwu"/>
+                            <constraint firstItem="bCL-01-JcP" firstAttribute="centerX" secondItem="q8P-MT-Ge1" secondAttribute="centerX" id="mO6-fV-FEv"/>
+                            <constraint firstItem="xl4-6U-JmW" firstAttribute="centerY" secondItem="q8P-MT-Ge1" secondAttribute="centerY" id="wCe-1i-BXn"/>
+                            <constraint firstItem="bCL-01-JcP" firstAttribute="centerY" secondItem="q8P-MT-Ge1" secondAttribute="centerY" id="z0W-n1-HOo"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerViewCenterYConstraint" destination="z0W-n1-HOo" id="aI5-U5-Xbs"/>
+                        <outlet property="letterHeaderLabel" destination="Uv1-7J-N1P" id="txt-Kc-iQ9"/>
+                        <outlet property="letterImageViewCenterXConstraint" destination="3HV-Js-l3A" id="pve-JV-4Nl"/>
+                        <outlet property="letterTextView" destination="SmE-vA-gIr" id="oS4-GA-v6b"/>
+                        <outlet property="letterTextViewCenterXConstraint" destination="Rg2-aH-ITp" id="jPg-hG-cs8"/>
+                        <outlet property="sendButton" destination="KKj-VK-oai" id="bcv-R6-47l"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="99m-kO-5wD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AAy-cp-uov">
+                    <connections>
+                        <action selector="tapGestureTapped:" destination="5d2-DT-zgQ" id="oT6-32-ULB"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="568.79999999999995" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="fedex" width="210" height="209"/>
+        <image name="letter" width="168" height="102"/>
+        <image name="london" width="410" height="729"/>
+        <image name="nyc" width="410" height="729"/>
+        <image name="sendButton" width="66" height="65"/>
+    </resources>
+</document>

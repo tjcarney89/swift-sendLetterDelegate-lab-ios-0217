@@ -28,12 +28,16 @@ class NewYorkViewController: UIViewController {
         receivedHeaderLabel.isHidden = true
         letterTextView.isHidden = true
     }
+
+    
     
     // MARK: Action
     
     @IBAction func sendButton(_ sender: UIButton) {
         animatePackage {
             self.performSegue(withIdentifier: "sentSegue", sender: nil)
+            
+            
         }
     }
     
@@ -42,7 +46,8 @@ class NewYorkViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "sentSegue" {
-            
+            let destVC = segue.destination as! LondonViewController
+            destVC.delegate = self
         }
         
     }
@@ -85,5 +90,15 @@ class NewYorkViewController: UIViewController {
         
     }
 
+}
+
+extension NewYorkViewController: LondonViewControllerDelegate {
+    func letterSent(from: LondonViewController, message: String) {
+        letterTextView.text = message
+        receivedHeaderLabel.isHidden = false
+        letterTextView.isHidden = false
+        packageImageView.isHidden = true
+        sendButton.isHidden = true
+    }
 }
 
